@@ -46,6 +46,18 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-areas:
+        "one one one one two two two two"
+        "one one one one two two two two"
+        "one one one one two two two two"
+        "one one one one two two two two"
+        /* cant use integers as grid area names */
+    }
+
+    .item3 {
+      grid-column: one-start / two-end;
+      grid-row-end: one-end;
+      /* use area name as implicit line name */
     }
   </style>
 </body>
