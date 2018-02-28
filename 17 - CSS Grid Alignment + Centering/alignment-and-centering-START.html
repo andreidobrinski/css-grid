@@ -54,9 +54,11 @@
 
   <style>
     /*
-      justify-items:
+      justify-items: default is stretch
       align-items:
 
+      what do we do with extra space?:
+      use when container is bigger than grid needs to be
       justify-content:
       align-content:
 
@@ -65,12 +67,31 @@
 
       justify-* is row axis
       align-* is column axis
+      use on grid items to override container value
     */
 
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: repeat(10, 1fr);
+      border: 10px solid var(--yellow);
+      grid-template-columns: repeat(5, 100px);
+      grid-template-rows: repeat(5, 100px);
+      place-items: center center;
+      justify-content:
+      /*
+      is the equivalent of doing this:
+      justify-items: center;
+      align-items: center;
+      Justify first, then Align
+      */
+    }
+
+    .itm {
+      background: white;
+    }
+
+    .itm5 {
+      justify-self: stretch;
     }
   </style>
 </body>
