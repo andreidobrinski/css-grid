@@ -24,7 +24,14 @@
   </div>
 
   <style>
-    .unknown {}
+    .unknown {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      grid-gap: 20px;
+      NOTES:
+      /* the newly added items will begin to wrap after enough of them
+      can't fit at 50px */
+    }
   </style>
 </body>
 

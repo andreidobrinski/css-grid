@@ -19,7 +19,12 @@
   </div>
 
   <style>
-    .stacked {}
+    .stacked {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      /* NOTES: only flexbox can do this because grid tracks are rigid */
+    }
 
     .stacked>* {
       width: 30%;
